@@ -102,7 +102,7 @@ class MyDataset(Dataset):
 
 def generate_data_loader(data_path, flag_mode, flag_tuning, batch_size, n_workers):
     my_dataset = MyDataset(data_path, flag_mode, flag_tuning)
-    print(len(my_dataset))
+    # print(len(my_dataset))
     my_data_loader = DataLoader(my_dataset, batch_size, shuffle=True, num_workers=n_workers)
     return my_data_loader
 
